@@ -48,7 +48,7 @@
     setState('holding');
     intro.classList.add('is-holding');
     intro.dataset.holdStartedAt = String(performance.now());
-    message.textContent = 'Hạnh phúc khi có bạn chung vui.';
+    message.textContent = 'Hạnh phúc khi có Anh/Chị chung vui.';
     // Count one full second only after the card is lifted and the envelope fades.
     schedule(enterWebsite, HOLD_MS);
   }
@@ -86,7 +86,7 @@
     envelope.removeAttribute('aria-disabled');
     openButton.removeAttribute('aria-disabled');
     skipButton.hidden = true;
-    message.textContent = 'Hạnh phúc khi có bạn chung vui.';
+    message.textContent = 'Hạnh phúc khi có Anh/Chị chung vui.';
     intro.setAttribute('tabindex', '-1');
     intro.focus({preventScroll:true});
   }

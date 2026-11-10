@@ -92,3 +92,11 @@ BẢN CẬP NHẬT THEO MẪU PREMIUM HỒNG KEM
 - Không lặp ảnh giữa các phần trên cùng màn hình.
 - Ảnh WebP có nhiều kích thước để tải phù hợp với từng thiết bị.
 - Copyright by DO CHI CAN ở cuối trang.
+
+BẢN ĐIỀU CHỈNH XƯNG HÔ KHI MỜI ANH/CHỊ
+
+- Nền tảng: bản Premium hồng kem 1 giây FINAL.
+- Người mời xưng em/chúng em; khách mời được gọi là Anh/Chị.
+- Chỉnh đồng bộ lời mời, tiêu đề lịch trình, thông điệp mở thiệp và hướng dẫn nhạc.
+- Giữ nguyên hình ảnh, màu sắc, khung, bố cục, lịch trình và phần xác nhận của bản gốc.
+- Giữ nguyên nhạc, hiệu ứng và thời gian giữ thiệp 1 giây.

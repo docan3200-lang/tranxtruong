@@ -30,7 +30,7 @@
       open.querySelector('.open-label').textContent = 'KHÁM PHÁ THIỆP';
       status.hidden = true;
     } else if (started) {
-      note.textContent = 'Bạn có thể bật lại giai điệu ở nút nhạc phía dưới';
+      note.textContent = 'Anh/Chị có thể bật lại giai điệu ở nút nhạc phía dưới';
     }
   }
   function message(text) {
@@ -46,17 +46,17 @@
       attempt.catch((error) => {
         syncMusic();
         if (error.name === 'NotAllowedError') {
-          note.textContent = 'Chạm “Mở thiệp” để nghe nhạc cùng chúng mình';
-          if (fromGesture) message('Chạm “Bật nhạc” để bắt đầu giai điệu nhé!');
+          note.textContent = 'Anh/Chị chạm “Mở thiệp” để nghe nhạc cùng chúng em';
+          if (fromGesture) message('Anh/Chị chạm “Bật nhạc” để bắt đầu giai điệu nhé!');
         } else if (fromGesture) {
-          message('Nhạc chưa tải xong. Bạn chạm “Bật nhạc” để thử lại nhé!');
+          message('Nhạc chưa tải xong. Anh/Chị chạm “Bật nhạc” để thử lại nhé!');
         }
       });
     }
   }
   audio.addEventListener('play', syncMusic);
   audio.addEventListener('pause', syncMusic);
-  audio.addEventListener('error', () => message('Chưa tải được nhạc. Bạn kiểm tra kết nối và thử lại nhé!'));
+  audio.addEventListener('error', () => message('Chưa tải được nhạc. Anh/Chị vui lòng kiểm tra kết nối và thử lại nhé!'));
   function toggleMusic() {
     if (audio.paused) { optedOut = false; playMusic(true); }
     else { optedOut = true; audio.pause(); }
