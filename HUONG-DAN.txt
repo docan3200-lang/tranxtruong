@@ -1,20 +1,32 @@
-THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN – BẢN MỞ THIỆP V4
+THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN — BẢN THEO MOCKUP ĐÃ CHỐT
+=============================================================
 
-Đã cải thiện phần thiệp ngoài:
-- Phong bì dạng đứng với nhiều lớp giấy, không bị biến thành khối phẳng.
-- Dấu sáp T&T.
-- Khi bấm mở: dấu sáp biến mất, nắp lật lên, tấm thiệp trượt lên rồi chuyển sang ảnh cưới.
-- Nội dung: THE WEDDING OF / Minh Trường & Quế Trân / 28.11.2026.
-- Mobile dùng ảnh dọc riêng; desktop dùng ảnh ngang.
-- Giữ lịch trình, nhạc Lễ Đường, cánh hoa rơi và RSVP.
+PHẦN ĐÃ HOÀN THÀNH
+- Phong bì giấy màu ivory, dấu sáp T&T, nút CHẠM ĐỂ MỞ THIỆP
+- Tấm thiệp trượt lên sau khi nhấp, hiển thị THE WEDDING OF / Minh Trường & Quế Trân / 28.11.2026
+- Mobile dùng ảnh dọc gốc hero-mobile.jpg, KHÔNG dùng object-fit: cover nên không cắt dâu rể
+- Desktop dùng ảnh ngang gốc hero-desktop.jpg
+- Lời ngỏ, lịch trình Trà Vinh 27-28/11, ảnh Ao Bà Om và Biển Ba Động
+- Link Google Form RSVP + mã QR chính xác
+- Nhạc bài Lễ Đường, nút bật/tắt, hoa rơi nhẹ
+- Footer: Copyright by DO CHI CAN
 
-CẬP NHẬT GITHUB
-1. Giải nén file ZIP.
-2. Trong GitHub repository tranxtruong, thay index.html, style.css và script.js.
-3. Nếu đã dùng bản V3 và ảnh/nhạc có sẵn thì KHÔNG cần tải lại assets.
-4. Nếu chưa có, tải toàn bộ thư mục assets lên GitHub.
-5. Commit changes rồi tải mới trang bằng Ctrl+Shift+R hoặc tab ẩn danh.
+CẬP NHẬT GITHUB PAGES
+1. Giải nén file ZIP (KHÔNG upload nguyên file ZIP).
+2. Mở https://github.com/docan3200-lang/tranxtruong
+3. Vào Code, cập nhật 3 file index.html, style.css, script.js và toàn bộ assets/.
+   Lưu ý: File mới phải nằm ở thư mục gốc repository, KHÔNG thêm một cấp thư mục con.
+4. Commit changes.
+5. Nếu Pages đang bật nhánh main /(root), KHÔNG cần bật lại.
+6. Mở https://docan3200-lang.github.io/tranxtruong/ và Ctrl+Shift+R (máy tính) / mở tab riêng trên iPhone để tránh cache.
 
-LƯU Ý: Safari/Chrome có thể chặn nhạc tự phát có tiếng; nút MỞ THIỆP kích hoạt phát nhạc khi được chạm.
+LƯU Ý
+- Trình duyệt iPhone thường CHẶN nhạc tự phát có tiếng. Khách chạm "CHẠM ĐỂ MỞ THIỆP" sẽ kích hoạt nhạc.
+- Quyền phát công khai bản ghi âm phụ thuộc chủ sở hữu bản quyền; cần đảm bảo đã có quyền sử dụng nhạc.
+- Lịch trình tham quan Biển Ba Động sáng 28/11 có thể không đủ thời gian trước tiệc 11:00 tùy nơi lưu trú. Cần rà soát lịch trình trước khi gửi khách.
+- Ảnh Ao Bà Om/Biển Ba Động lấy từ tư liệu lịch trình đã cung cấp, có độ phân giải thấp. Nên thay ảnh gốc lớn nếu có.
 
-Cập nhật: footer cuối website có dòng Copyright by DO CHI CAN.
+TÙY CHỈNH
+- Trong index.html: chỉnh nội dung văn bản, giờ, ngày, link RSVP.
+- Trong style.css: sửa màu tại :root.
+- Thay ảnh trong assets/ theo đúng tên file.
