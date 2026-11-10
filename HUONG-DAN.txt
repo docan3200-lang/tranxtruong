@@ -1,38 +1,33 @@
-THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN – PHIÊN BẢN DELUXE
-====================================================
+PHIÊN BẢN REFINED - MINH TRƯỜNG x QUẾ TRÂN
+=========================================
 
-ĐÃ TÍCH HỢP:
-- Ảnh cưới từ 2 ảnh JPG bạn cung cấp.
-- Nhạc nền: Lễ Đường (Dreamland Version) theo MP3 bạn cung cấp.
-- Màn hình phong bì mở thiệp; hoa rơi tự động (không phải video).
-- Hiệu ứng xuất hiện khi cuộn; nút bật/tắt nhạc; thanh tiến trình cuộn.
-- Link Google Forms RSVP và mã QR.
-- Bố cục tối ưu cho điện thoại.
+Điểm đã chỉnh:
+- Thiệp ngoài theo PHƯƠNG ÁN A:
+  THE WEDDING OF
+  Minh Trường & Quế Trân
+  28.11.2026
+- Dấu sáp: T&T
+- Tối giản icon phần text
+- Tối ưu lại bố cục cho điện thoại và máy tính
+- Mobile dùng ảnh dọc hero-mobile.jpg để tránh bị cắt dâu rể
+- Desktop dùng ảnh ngang hero-desktop.jpg
+- Giữ nhạc nền, cánh hoa rơi, RSVP và QR
 
-CẬP NHẬT LÊN GITHUB PAGES:
-1) Giải nén file ZIP mới.
-2) Mở GitHub repository 'tranxtruong'.
-3) Do repository đã có index.html, style.css, script.js:
-   - Cách dễ nhất: mở từng file cũ trên GitHub -> biểu tượng bút chì -> thay bằng
-     nội dung file cùng tên từ bản mới -> Commit changes.
-   - Để tải assets: vào repository -> Add file -> Upload files và tải toàn bộ
-     thư mục assets mới vào đúng đường dẫn assets/.
-   - Nếu GitHub báo trùng file trong khi Upload, có thể dùng giao diện chỉnh
-     sửa từng file hoặc xóa file cũ rồi upload bản mới.
-4) Đảm bảo index.html, style.css, script.js nằm ngay gốc repo; assets ở assets/.
-5) GitHub Settings -> Pages -> Source: Deploy from a branch; main; /(root).
-6) Sau khi GitHub Pages deploy, làm mới trang. Nếu trình duyệt còn giữ CSS cũ,
-   thử tải lại không dùng cache.
+CÁCH ĐĂNG LÊN GITHUB
+---------------------
+1. Giải nén file zip.
+2. Vào repository GitHub của bạn.
+3. Upload các file sau để ghi đè file cũ:
+   - index.html
+   - style.css
+   - script.js
+   - toàn bộ thư mục assets
+4. Commit changes.
+5. Nếu GitHub Pages đã bật sẵn main /(root), chỉ cần đợi 1-5 phút.
+6. Mở lại website để kiểm tra.
 
-NHẠC TỰ PHÁT:
-Website sẽ thử phát nhạc ngay khi mở. Tuy nhiên trình duyệt (nhất là
-Safari/iPhone) thường chặn autoplay có âm thanh. Nút 'CHẠM ĐỂ MỞ THIỆP'
-phát nhạc trong thao tác chạm, ổn định hơn. Không có cách hợp lệ để đảm bảo
-âm thanh tự động phát trên tất cả điện thoại mà không cần tương tác.
-
-LƯU Ý:
-Mốc 27–28/11 và hạn xác nhận 20/11 đang dựa trên nội dung bạn cung cấp.
-Lịch trình biển Ba Động cần được xác nhận giờ di chuyển thực tế.
-Ảnh Ao Bà Om/Biển Ba Động là ảnh được trích từ thiết kế bạn đã gửi;
-để nét hơn, bạn có thể thay bằng ảnh địa điểm gốc chất lượng cao.
-Sử dụng bản nhạc có quyền đăng tải/phát công khai để tránh vấn đề bản quyền.
+LƯU Ý NHẠC TỰ ĐỘNG
+------------------
+Website sẽ tự thử phát nhạc ngay khi mở.
+Một số trình duyệt điện thoại, đặc biệt iPhone/Safari, có thể chặn nhạc tự động có tiếng.
+Khi đó khách chỉ cần chạm "MỞ THIỆP" hoặc chạm nút nhạc một lần để phát.

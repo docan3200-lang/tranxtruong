@@ -3,142 +3,171 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#faf4f2">
-  <meta name="description" content="Thư mời cưới của Minh Trường và Quế Trân. Về Trà Vinh cùng chúng mình ngày 27–28/11.">
-  <title>Minh Trường ♡ Quế Trân | Ngày chung đôi</title>
-  <meta property="og:title" content="Thiệp cưới Minh Trường & Quế Trân ♡">
-  <meta property="og:description" content="Một chuyến đi nhỏ, một ngày vui lớn. Trà Vinh • 27–28/11">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://docan3200-lang.github.io/tranxtruong/assets/hero.jpg">
+  <meta name="theme-color" content="#fbf6f3">
+  <meta name="description" content="Thiệp cưới Minh Trường & Quế Trân - 28.11.2026, Trà Vinh.">
+  <title>Minh Trường ♡ Quế Trân | The Wedding Of</title>
+  <meta property="og:title" content="Thiệp cưới Minh Trường & Quế Trân">
+  <meta property="og:description" content="The Wedding Of Minh Trường & Quế Trân · 28.11.2026 · Trà Vinh">
+  <meta property="og:image" content="https://docan3200-lang.github.io/tranxtruong/assets/hero-mobile.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/hero.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="intro-active">
-  <div id="scrollProgress" aria-hidden="true"></div>
+<body class="has-intro">
+  <div id="progressBar" aria-hidden="true"></div>
   <div id="petals" aria-hidden="true"></div>
 
-  <section class="intro" id="intro" aria-label="Mở thiệp cưới">
-    <div class="intro-haze"></div>
-    <div class="intro-panel">
-      <div class="intro-frame">
-        <span class="eyebrow intro-eyebrow">MỘT LỜI MỜI TỪ TRÁI TIM</span>
-        <span class="intro-monogram">M <span class="intro-amp">&</span> T</span>
-        <div class="intro-flourish" aria-hidden="true"><span></span> ♡ <span></span></div>
-        <p class="intro-message">Có một ngày thật đặc biệt,<br>chúng mình mong bạn sẽ ở đó.</p>
-        <div class="envelope-scene" aria-hidden="true">
-          <div class="envelope-letter"><span>Trân trọng kính mời</span><strong>Minh Trường & Quế Trân</strong></div>
-          <div class="envelope-back"></div>
-          <div class="envelope-front"></div>
-          <div class="envelope-flap"></div>
-          <div class="wax-seal">囍</div>
-        </div>
-        <p class="intro-location">TRÀ VINH <span>✧</span> 27 – 28.11</p>
-        <button id="openInvite" class="open-button" type="button">♡ CHẠM ĐỂ MỞ THIỆP <span aria-hidden="true">↗</span></button>
-        <small class="intro-note">Mở thiệp cùng giai điệu yêu thương</small>
+  <section class="intro" id="intro" aria-label="Thiệp ngoài">
+    <div class="intro-backdrop"></div>
+    <div class="intro-shell">
+      <div class="intro-copy">
+        <p class="eyebrow">A WEDDING INVITATION</p>
       </div>
+      <div class="envelope-stage">
+        <div class="letter-card">
+          <p class="letter-top">THE WEDDING OF</p>
+          <h1>Minh Trường &amp; Quế Trân</h1>
+          <p class="letter-date">28.11.2026</p>
+          <p class="letter-place">TRÀ VINH, VIỆT NAM</p>
+        </div>
+        <div class="envelope back"></div>
+        <div class="envelope pocket"></div>
+        <div class="envelope flap"></div>
+        <div class="wax-seal">T&amp;T</div>
+      </div>
+      <button id="openInvite" class="open-button" type="button">MỞ THIỆP</button>
+      <p class="intro-note">Chạm để mở thiệp và nghe giai điệu yêu thương</p>
     </div>
   </section>
 
-  <div class="floating-controls">
-    <button id="musicToggle" class="float-button music-control" type="button" aria-label="Bật nhạc" title="Bật/tắt nhạc"><span class="music-glyph">♫</span><span id="musicState">Bật nhạc</span></button>
-    <a class="float-button back-top" href="#dau-trang" aria-label="Lên đầu trang" title="Lên đầu trang">↑</a>
-  </div>
-  <div id="musicNotice" class="music-notice" role="status" hidden>Chạm vào nút ♫ để nghe nhạc nhé!</div>
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="Bật nhạc">
+    <span class="music-icon">♫</span>
+    <span id="musicState">Bật nhạc</span>
+  </button>
+  <div id="musicNotice" class="music-notice" hidden>Trình duyệt có thể chặn nhạc tự động. Chạm vào trang để bật nhạc nhé.</div>
 
-  <main id="dau-trang">
-    <header class="hero">
-      <div class="hero-photo" role="img" aria-label="Ảnh cưới Minh Trường và Quế Trân"></div>
-      <div class="hero-veil"></div>
-      <div class="hero-circle" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-upper reveal">
-          <p class="small-caps">WELCOME TO OUR WEDDING</p>
-          <div class="name-line"><div class="hero-name"><span>Quý Nam</span><strong>MINH TRƯỜNG</strong></div><span class="double-happiness" aria-label="Song hỷ">囍</span><div class="hero-name"><span>Út Nữ</span><strong>QUẾ TRÂN</strong></div></div>
+  <main>
+    <header class="hero" id="top">
+      <picture class="hero-media">
+        <source media="(max-width: 767px)" srcset="assets/hero-mobile.jpg">
+        <img src="assets/hero-desktop.jpg" alt="Ảnh cưới Minh Trường và Quế Trân">
+      </picture>
+      <div class="hero-overlay"></div>
+      <div class="hero-panel"></div>
+      <div class="hero-content container reveal visible">
+        <div class="hero-head">
+          <p class="eyebrow light">WELCOME TO OUR WEDDING</p>
+          <div class="hero-names">
+            <div>
+              <span>Quý Nam</span>
+              <strong>MINH TRƯỜNG</strong>
+            </div>
+            <div class="monogram">T&amp;T</div>
+            <div>
+              <span>Út Nữ</span>
+              <strong>QUẾ TRÂN</strong>
+            </div>
+          </div>
         </div>
-        <div class="hero-bottom reveal">
+        <div class="hero-bottom">
           <p class="hero-script">Ngày chúng mình nên duyên</p>
-          <p class="hero-date">27 – 28 / 11 <i>✦</i> TRÀ VINH</p>
-          <p class="hero-message">Về quê mình dự cưới, tiện thể đi chơi một chuyến nhé! ♡</p>
-          <a class="scroll-cue" href="#loi-ngo">KHÁM PHÁ HÀNH TRÌNH <span>↓</span></a>
+          <p class="hero-date">28.11.2026 · TRÀ VINH</p>
+          <p class="hero-message">Về quê mình dự cưới, tiện thể đi chơi một chuyến nhé.</p>
+          <a class="hero-link" href="#loi-ngo">Khám phá hành trình</a>
         </div>
       </div>
     </header>
 
-    <section class="letter section-pad" id="loi-ngo">
-      <div class="grain" aria-hidden="true"></div>
-      <div class="content-width letter-grid">
-        <div class="letter-content reveal">
-          <p class="eyebrow">LỜI NHẮN GỬI ĐẾN NGƯỜI THƯƠNG</p>
-          <h2 class="script-title">Lời ngỏ</h2>
-          <div class="tiny-ornament" aria-hidden="true">✦ — ♡ — ✦</div>
-          <p class="italic">Gửi Anh/Chị và những người thương mến,</p>
-          <p>Nhân dịp ngày vui của chúng em và gia đình, chúng em rất mong được chia sẻ niềm hạnh phúc này cùng Anh/Chị.</p>
-          <p>Bên cạnh tiệc cưới chính vào <strong>ngày 28/11</strong>, chúng em thân mời Anh/Chị về Trà Vinh từ <strong>ngày 27/11</strong> để cùng dự tiệc thân mật và khám phá một vài địa điểm thú vị.</p>
-          <p>Chúng em đã chuẩn bị một lịch trình nhỏ để Anh/Chị thuận tiện sắp xếp thời gian. Mong rằng đây sẽ là một chuyến đi thật vui và đáng nhớ!</p>
-          <p class="signature">Thương mến, <span>Minh Trường & Quế Trân ♡</span></p>
+    <section class="section letter" id="loi-ngo">
+      <div class="container letter-grid">
+        <div class="letter-text reveal">
+          <p class="eyebrow">LỜI NGỎ</p>
+          <h2 class="section-title">Thân gửi Anh/Chị</h2>
+          <p>Chúng em rất hân hạnh được mời Anh/Chị cùng gia đình về Trà Vinh chung vui trong ngày trọng đại của chúng em.</p>
+          <p>Bên cạnh lễ cưới chính vào <strong>ngày 28/11/2026</strong>, chúng em chuẩn bị một lịch trình nhỏ từ <strong>27–28/11</strong> để Anh/Chị thuận tiện sắp xếp thời gian, vừa tham dự ngày vui, vừa có dịp khám phá một vài địa điểm thú vị.</p>
+          <p>Sự hiện diện của Anh/Chị sẽ là niềm vui và hạnh phúc rất lớn đối với chúng em.</p>
+          <p class="signature">Minh Trường &amp; Quế Trân</p>
         </div>
-        <div class="letter-visual reveal delay-1">
-          <div class="photo-mat"><img src="assets/couple-portrait.jpg" alt="Minh Trường và Quế Trân trong bộ ảnh cưới" loading="lazy"></div>
-          <span class="corner-bloom" aria-hidden="true">✿</span>
-          <div class="visual-caption">a little love story</div>
+        <div class="letter-photo reveal delay-1">
+          <div class="photo-frame">
+            <img src="assets/couple-inside.jpg" alt="Ảnh cưới Minh Trường và Quế Trân thứ hai" loading="lazy">
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="journey section-pad" id="lich-trinh">
-      <div class="content-width">
-        <div class="section-heading reveal"><p class="eyebrow">OUR WEDDING JOURNEY</p><h2 class="script-title">Lịch trình 27 – 28/11</h2><span class="location">TRÀ VINH</span><div class="tiny-ornament">✧ ─── ♡ ─── ✧</div></div>
-        <div class="days-grid">
-          <article class="day-card reveal"><div class="day-icon" aria-hidden="true">✿</div><p class="day-label">NGÀY 01 · 27/11</p><h3>Về quê mình chơi!</h3><p class="day-sub">Di chuyển · Tham quan · Tiệc thân mật</p>
-            <ol class="timeline">
-              <li><time>13:00</time><span>Khởi hành từ TP.HCM</span></li>
+    <section class="section schedule" id="lich-trinh">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">WEDDING JOURNEY</p>
+          <h2 class="section-title center">Lịch trình 27–28/11</h2>
+          <p class="section-sub center">Trà Vinh</p>
+        </div>
+
+        <div class="schedule-grid">
+          <article class="schedule-card reveal">
+            <p class="card-day">NGÀY 01 · 27.11.2026</p>
+            <h3>Về quê mình chơi</h3>
+            <ul class="timeline">
+              <li><time>13:00</time><span>Khởi hành từ TP. HCM</span></li>
               <li><time>16:00</time><span>Tham quan Ao Bà Om</span></li>
               <li><time>16:30</time><span>Nhận phòng khách sạn</span></li>
               <li><time>18:30</time><span>Tiệc thân mật cùng gia đình</span></li>
-            </ol>
+            </ul>
           </article>
-          <article class="day-card reveal delay-1"><div class="day-icon" aria-hidden="true">♡</div><p class="day-label">NGÀY 02 · 28/11</p><h3>Ngày chung đôi!</h3><p class="day-sub">Khám phá · Tiệc cưới · Trở về</p>
-            <ol class="timeline">
+
+          <article class="schedule-card reveal delay-1">
+            <p class="card-day">NGÀY 02 · 28.11.2026</p>
+            <h3>The Wedding Day</h3>
+            <ul class="timeline">
               <li><time>07:30</time><span>Ăn sáng tại Hủ tiếu Hoàng Uyên</span></li>
               <li><time>08:30</time><span>Tham quan biển Ba Động</span></li>
               <li><time>10:00</time><span>Chuẩn bị tham dự tiệc cưới</span></li>
               <li><time>11:00</time><span>Tiệc cưới chính thức</span></li>
               <li><time>Sau tiệc</time><span>Lên xe về lại Sài Gòn</span></li>
-            </ol>
+            </ul>
           </article>
         </div>
-        <div class="polaroid-grid">
-          <figure class="polaroid reveal"><img src="assets/ao-ba-om.jpg" loading="lazy" alt="Cảnh Ao Bà Om ở Trà Vinh"><figcaption>Ao Bà Om</figcaption></figure>
-          <figure class="polaroid reveal delay-1"><img src="assets/bien-ba-dong.jpg" loading="lazy" alt="Biển Ba Động lúc hoàng hôn"><figcaption>Biển Ba Động</figcaption></figure>
+
+        <div class="place-grid">
+          <figure class="place-card reveal">
+            <img src="assets/ao-ba-om.jpg" alt="Ao Bà Om" loading="lazy">
+            <figcaption>Ao Bà Om</figcaption>
+          </figure>
+          <figure class="place-card reveal delay-1">
+            <img src="assets/bien-ba-dong.jpg" alt="Biển Ba Động" loading="lazy">
+            <figcaption>Biển Ba Động</figcaption>
+          </figure>
         </div>
-        <p class="schedule-note reveal">Lịch trình dự kiến có thể được điều chỉnh theo tình hình thực tế.</p>
+        <p class="small-note reveal">Lịch trình dự kiến có thể được điều chỉnh theo tình hình thực tế.</p>
       </div>
     </section>
 
-    <section class="rsvp section-pad" id="xac-nhan">
-      <div class="rsvp-halo" aria-hidden="true"></div>
-      <div class="rsvp-card reveal">
-        <div class="rsvp-corner rsvp-corner-top" aria-hidden="true">❀</div>
-        <p class="eyebrow">MỘT LỜI HẸN VỚI CHÚNG MÌNH</p>
-        <h2 class="rsvp-title">Xác nhận tham dự</h2>
-        <p class="rsvp-script">Tiệc cưới của chúng em ♡</p>
-        <div class="tiny-ornament">✧ ─── ♡ ─── ✧</div>
-        <p>Sự hiện diện của Anh/Chị là niềm hạnh phúc của chúng em.</p>
-        <p>Anh/Chị vui lòng xác nhận tham dự để chúng em thuận tiện chuẩn bị và đón tiếp chu đáo nhất nhé!</p>
-        <a class="rsvp-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdxaEkX8_KLoxcEeJ3CDu9AVxn4IBzPbX6ADZVHQI3McKheqQ/viewform" target="_blank" rel="noopener noreferrer">♡ XÁC NHẬN THAM DỰ NGAY <span aria-hidden="true">↗</span></a>
-        <p class="deadline">Vui lòng xác nhận trước ngày <strong>20/11</strong></p>
-        <div class="qr-area"><p>Hoặc quét mã QR</p><img src="assets/rsvp-qr.png" alt="Mã QR dẫn đến biểu mẫu xác nhận tham dự" loading="lazy"></div>
-        <p class="closing-script">Trân trọng cảm ơn Anh/Chị!</p>
-        <div class="rsvp-corner rsvp-corner-bottom" aria-hidden="true">❀</div>
+    <section class="section rsvp" id="xac-nhan">
+      <div class="container narrow reveal">
+        <p class="eyebrow center">RSVP</p>
+        <h2 class="section-title center">Xác nhận tham dự</h2>
+        <p class="section-sub center">Sự hiện diện của Anh/Chị là niềm hạnh phúc của chúng em.</p>
+        <p class="rsvp-text center">Anh/Chị vui lòng xác nhận để chúng em thuận tiện chuẩn bị và đón tiếp chu đáo nhất.</p>
+        <a class="rsvp-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdxaEkX8_KLoxcEeJ3CDu9AVxn4IBzPbX6ADZVHQI3McKheqQ/viewform" target="_blank" rel="noopener noreferrer">XÁC NHẬN THAM DỰ</a>
+        <div class="qr-box">
+          <p>Hoặc quét mã QR</p>
+          <img src="assets/rsvp-qr.png" alt="Mã QR RSVP" loading="lazy">
+        </div>
+        <p class="deadline center">Vui lòng xác nhận trước ngày 20/11</p>
       </div>
     </section>
 
-    <footer class="footer"><div class="footer-flourish">✦ ♡ ✦</div><p>Minh Trường <span>&</span> Quế Trân</p><small>27 — 28.11 · TRÀ VINH</small></footer>
+    <footer class="footer">
+      <p>Minh Trường &amp; Quế Trân</p>
+      <small>THE WEDDING OF · 28.11.2026 · TRÀ VINH</small>
+    </footer>
   </main>
-  <audio id="bgMusic" preload="auto" loop playsinline><source src="assets/wedding.mp3" type="audio/mpeg"></audio>
+
+  <audio id="bgMusic" preload="auto" loop playsinline>
+    <source src="assets/wedding.mp3" type="audio/mpeg">
+  </audio>
   <script src="script.js"></script>
 </body>
 </html>
