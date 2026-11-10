@@ -1,33 +1,20 @@
-PHIÊN BẢN REFINED - MINH TRƯỜNG x QUẾ TRÂN
-=========================================
+THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN – BẢN MỞ THIỆP V4
 
-Điểm đã chỉnh:
-- Thiệp ngoài theo PHƯƠNG ÁN A:
-  THE WEDDING OF
-  Minh Trường & Quế Trân
-  28.11.2026
-- Dấu sáp: T&T
-- Tối giản icon phần text
-- Tối ưu lại bố cục cho điện thoại và máy tính
-- Mobile dùng ảnh dọc hero-mobile.jpg để tránh bị cắt dâu rể
-- Desktop dùng ảnh ngang hero-desktop.jpg
-- Giữ nhạc nền, cánh hoa rơi, RSVP và QR
+Đã cải thiện phần thiệp ngoài:
+- Phong bì dạng đứng với nhiều lớp giấy, không bị biến thành khối phẳng.
+- Dấu sáp T&T.
+- Khi bấm mở: dấu sáp biến mất, nắp lật lên, tấm thiệp trượt lên rồi chuyển sang ảnh cưới.
+- Nội dung: THE WEDDING OF / Minh Trường & Quế Trân / 28.11.2026.
+- Mobile dùng ảnh dọc riêng; desktop dùng ảnh ngang.
+- Giữ lịch trình, nhạc Lễ Đường, cánh hoa rơi và RSVP.
 
-CÁCH ĐĂNG LÊN GITHUB
----------------------
-1. Giải nén file zip.
-2. Vào repository GitHub của bạn.
-3. Upload các file sau để ghi đè file cũ:
-   - index.html
-   - style.css
-   - script.js
-   - toàn bộ thư mục assets
-4. Commit changes.
-5. Nếu GitHub Pages đã bật sẵn main /(root), chỉ cần đợi 1-5 phút.
-6. Mở lại website để kiểm tra.
+CẬP NHẬT GITHUB
+1. Giải nén file ZIP.
+2. Trong GitHub repository tranxtruong, thay index.html, style.css và script.js.
+3. Nếu đã dùng bản V3 và ảnh/nhạc có sẵn thì KHÔNG cần tải lại assets.
+4. Nếu chưa có, tải toàn bộ thư mục assets lên GitHub.
+5. Commit changes rồi tải mới trang bằng Ctrl+Shift+R hoặc tab ẩn danh.
 
-LƯU Ý NHẠC TỰ ĐỘNG
-------------------
-Website sẽ tự thử phát nhạc ngay khi mở.
-Một số trình duyệt điện thoại, đặc biệt iPhone/Safari, có thể chặn nhạc tự động có tiếng.
-Khi đó khách chỉ cần chạm "MỞ THIỆP" hoặc chạm nút nhạc một lần để phát.
+LƯU Ý: Safari/Chrome có thể chặn nhạc tự phát có tiếng; nút MỞ THIỆP kích hoạt phát nhạc khi được chạm.
+
+Cập nhật: footer cuối website có dòng Copyright by DO CHI CAN.

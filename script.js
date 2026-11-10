@@ -40,15 +40,20 @@ window.addEventListener('load', () => {
   tryPlayMusic(false);
 });
 
-openInvite.addEventListener('click', async () => {
-  await tryPlayMusic(true);
+openInvite.addEventListener('click', () => {
+  // Kích hoạt nhạc ngay trong sự kiện chạm, không chờ Promise trước hoạt ảnh.
+  void tryPlayMusic(true);
   intro.classList.add('opening');
   openInvite.disabled = true;
-  setTimeout(() => intro.classList.add('is-open'), 850);
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cardReveal = reduced ? 100 : 1050;
+  const leave = reduced ? 250 : 3100;
+  setTimeout(() => intro.classList.add('card-revealed'), cardReveal);
+  setTimeout(() => intro.classList.add('is-open'), leave);
   setTimeout(() => {
     document.body.classList.remove('has-intro');
     intro.remove();
-  }, 1700);
+  }, leave + (reduced ? 50 : 850));
 });
 
 musicToggle.addEventListener('click', async () => {

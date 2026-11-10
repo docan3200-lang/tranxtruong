@@ -150,3 +150,60 @@ a{text-decoration:none;color:inherit}img{display:block;max-width:100%}button{fon
   html{scroll-behavior:auto}
   .reveal,.petal,.intro,.letter-card,.wax-seal,.envelope.flap{transition:none;animation:none}
 }
+
+/* ==========================================================
+   ENVELOPE EXPERIENCE V4 — PORTRAIT FRENCH LETTER
+   The intro is isolated from the website styles below.
+   ========================================================== */
+.intro{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:18px 16px;overflow:hidden;background:#f7eeee;isolation:isolate;perspective:1200px}
+.intro-backdrop{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 37%,#fff9f5 0%,#f7eeec 60%,#eadbdd 100%);opacity:1}
+.intro-backdrop:after{content:"";position:absolute;inset:14px;border:1px solid rgba(172,117,125,.22);pointer-events:none}
+.intro-shell{position:relative;width:min(440px,100%);display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
+.intro-overline{font:500 11px 'Cormorant Garamond',serif;letter-spacing:.34em;color:#8d5861;margin:0 0 22px}
+.intro .envelope-stage{position:relative;width:min(310px,78vw);height:420px;margin:0 auto 28px;isolation:isolate;transform:translateZ(0)}
+.intro .envelope-shadow{position:absolute;z-index:-2;left:7%;right:7%;bottom:-6px;height:25px;border-radius:100%;background:rgba(102,60,68,.21);filter:blur(17px)}
+.intro .envelope-rear{position:absolute;z-index:1;inset:0;background:linear-gradient(117deg,#f9f2e9 0%,#f0e5da 44%,#faf3eb 100%);border:1px solid #d9c4b9;box-shadow:0 19px 39px rgba(100,59,68,.15),inset 0 0 0 8px #fffcf777}
+.intro .invitation-card{position:absolute;z-index:2;left:9%;right:9%;top:34%;height:61%;padding:17px 12px 14px;border:1px solid #ddc7bf;background:linear-gradient(140deg,#fffdf9,#fff7f4);box-shadow:0 8px 23px #70505825;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:top 1.05s cubic-bezier(.19,1,.22,1),transform 1.05s cubic-bezier(.19,1,.22,1),box-shadow 1s;will-change:top,transform}
+.intro .invitation-card:before{content:"";position:absolute;inset:7px;border:1px solid #e9d2d0;pointer-events:none}
+.intro .card-ornament{font:25px 'Cormorant Garamond',serif;color:#bd8a8e;line-height:1;margin:0 0 3px}
+.intro .invitation-kicker{font:600 11px 'Cormorant Garamond',serif;letter-spacing:.19em;color:#89535c;margin:0 0 11px}
+.intro .invitation-names{font:400 39px/.82 'Great Vibes',cursive;color:#8e475a;white-space:nowrap}
+.intro .invitation-names span{font:italic 23px 'Cormorant Garamond',serif;line-height:1.4}
+.intro .invitation-divider{width:70px;height:1px;background:#c6a7a0;margin:13px 0 8px}
+.intro .invitation-date{font:600 18px 'Cormorant Garamond',serif;letter-spacing:.12em;color:#8c5862;margin:0}
+.intro .invitation-city{font:500 10px 'Cormorant Garamond',serif;letter-spacing:.21em;color:#a77c82;margin:4px 0 0}
+.intro .envelope-front{position:absolute;z-index:4;left:0;right:0;bottom:0;height:58%;background:linear-gradient(140deg,#f2e5db 0%,#fbf2e8 52%,#ede0d5 100%);clip-path:polygon(0 0,50% 39%,100% 0,100% 100%,0 100%);filter:drop-shadow(0 -1px 1px #b18d8725)}
+.intro .envelope-fold{position:absolute;z-index:5;left:0;right:0;bottom:0;height:59%;background:linear-gradient(170deg,#ffffff55,transparent 55%),linear-gradient(125deg,#e8d9d1,#f8eee6 54%,#e8d7d1);clip-path:polygon(0 100%,50% 33%,100% 100%);pointer-events:none}
+.intro .envelope-flap{position:absolute;z-index:6;left:0;right:0;top:0;height:61%;background:linear-gradient(155deg,#faf1e8,#e8d9d1);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:50% 0;backface-visibility:hidden;transition:transform .9s cubic-bezier(.2,.7,.2,1),z-index 0s .47s;box-shadow:inset 0 3px 5px #fff8}
+.intro .envelope-seal{position:absolute;z-index:8;left:50%;top:46%;transform:translate(-50%,-50%);width:67px;height:67px;background:radial-gradient(circle at 36% 27%,#d6a2ae,#a96378 54%,#85465a 100%);border:2px solid #d1a7ac;box-shadow:inset 0 0 0 3px #ffffff24,0 6px 15px #77455155;border-radius:50%;display:grid;place-items:center;color:#fff2e8;font:600 22px 'Cormorant Garamond',serif;letter-spacing:.04em;transition:transform .4s,opacity .35s}
+.intro .envelope-seal span{border:1px solid #eccad081;border-radius:50%;width:52px;height:52px;display:grid;place-items:center}
+.intro .open-button{position:relative;border:1px solid #9b5867;background:#9b5867;color:#fffdf9;min-height:49px;min-width:221px;padding:12px 22px;font:500 11px 'Be Vietnam Pro',sans-serif;letter-spacing:.13em;box-shadow:0 10px 27px #874c5c2a;transition:background .2s,transform .2s}
+.intro .open-button span{margin-left:8px;font-size:16px}
+.intro .open-button:hover{background:#86485a;transform:translateY(-2px)}
+.intro .intro-note{margin:14px 0 0;color:#9c8182;font:italic 16px 'Cormorant Garamond',serif}
+.intro.opening .envelope-seal{transform:translate(-50%,-50%) scale(.6);opacity:0}
+.intro.opening .envelope-flap{transform:rotateX(-180deg);z-index:0}
+.intro.opening .invitation-card{top:3%;box-shadow:0 15px 32px #7b546031}
+.intro.opening .open-button{opacity:0;pointer-events:none}
+.intro.card-revealed .envelope-front,.intro.card-revealed .envelope-fold{opacity:.58;transition:opacity .6s}
+.intro.is-open{opacity:0;transition:opacity .8s ease;pointer-events:none}
+@media(max-width:767px){
+ .intro{padding:12px 12px max(12px,env(safe-area-inset-bottom))}
+ .intro-overline{margin-bottom:14px;font-size:10px}
+ .intro .envelope-stage{width:min(285px,76vw);height:min(390px,57svh);margin-bottom:22px}
+ .intro .invitation-names{font-size:34px}
+ .intro .invitation-kicker{font-size:10px}
+ .intro .invitation-date{font-size:17px}
+ .intro .card-ornament{font-size:19px}
+ .intro .envelope-seal{width:61px;height:61px}
+ .intro .envelope-seal span{width:47px;height:47px}
+ .intro .intro-note{font-size:14px}
+}
+@media(max-height:650px){.intro .envelope-stage{height:320px;width:235px;margin-bottom:14px}.intro-overline{margin-bottom:8px}.intro .invitation-names{font-size:31px}}
+@media(prefers-reduced-motion:reduce){.intro .invitation-card,.intro .envelope-flap,.intro .envelope-seal,.intro{transition-duration:.01ms!important}}
+
+/* Giữ lá thiệp phía sau phần túi khi đang trượt lên, không bật nổi đột ngột. */
+.intro.opening .invitation-card{transition-delay:.42s}
+
+/* Dòng ghi nhận người thiết kế ở cuối website */
+.site-credit{margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.35);width:fit-content;max-width:90%;font:400 10px/1.5 'Be Vietnam Pro',sans-serif;letter-spacing:.16em;color:rgba(255,255,255,.85);text-align:center}
