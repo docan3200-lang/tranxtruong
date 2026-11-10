@@ -1,39 +1,38 @@
-BỘ THIỆP CƯỚI MINH TRƯỜNG x QUẾ TRÂN
-====================================
+THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN – PHIÊN BẢN DELUXE
+====================================================
 
-Bộ file này đã có sẵn:
-- 2 ảnh cưới bạn gửi
-- Nhạc: Lễ Đường (Dreamland Version) - Kai Đinh
-- Link Google Form RSVP
-- Mã QR RSVP
-- Hiệu ứng hoa rơi
-- Nút bật/tắt nhạc
+ĐÃ TÍCH HỢP:
+- Ảnh cưới từ 2 ảnh JPG bạn cung cấp.
+- Nhạc nền: Lễ Đường (Dreamland Version) theo MP3 bạn cung cấp.
+- Màn hình phong bì mở thiệp; hoa rơi tự động (không phải video).
+- Hiệu ứng xuất hiện khi cuộn; nút bật/tắt nhạc; thanh tiến trình cuộn.
+- Link Google Forms RSVP và mã QR.
+- Bố cục tối ưu cho điện thoại.
 
-CÁCH CẬP NHẬT LÊN GITHUB
-------------------------
-1. Mở repository GitHub của bạn.
-2. Chọn Add file -> Upload files.
-3. Tải toàn bộ file trong thư mục này lên, gồm:
-   - index.html
-   - style.css
-   - script.js
-   - thư mục assets
-4. Nếu GitHub hỏi ghi đè file cũ, chọn Replace / Commit changes.
-5. Vào Settings -> Pages.
-6. Ở mục Branch, chọn main và /(root), rồi Save.
-7. Đợi 1-5 phút rồi mở website.
+CẬP NHẬT LÊN GITHUB PAGES:
+1) Giải nén file ZIP mới.
+2) Mở GitHub repository 'tranxtruong'.
+3) Do repository đã có index.html, style.css, script.js:
+   - Cách dễ nhất: mở từng file cũ trên GitHub -> biểu tượng bút chì -> thay bằng
+     nội dung file cùng tên từ bản mới -> Commit changes.
+   - Để tải assets: vào repository -> Add file -> Upload files và tải toàn bộ
+     thư mục assets mới vào đúng đường dẫn assets/.
+   - Nếu GitHub báo trùng file trong khi Upload, có thể dùng giao diện chỉnh
+     sửa từng file hoặc xóa file cũ rồi upload bản mới.
+4) Đảm bảo index.html, style.css, script.js nằm ngay gốc repo; assets ở assets/.
+5) GitHub Settings -> Pages -> Source: Deploy from a branch; main; /(root).
+6) Sau khi GitHub Pages deploy, làm mới trang. Nếu trình duyệt còn giữ CSS cũ,
+   thử tải lại không dùng cache.
 
-LƯU Ý VỀ NHẠC TỰ PHÁT
----------------------
-Website đã được cài đặt để TỰ THỬ phát nhạc ngay khi mở.
-Tuy nhiên một số trình duyệt điện thoại, nhất là iPhone/Safari, có thể chặn nhạc tự động có tiếng.
-Khi đó khách chỉ cần chạm một lần vào màn hình là nhạc sẽ phát.
+NHẠC TỰ PHÁT:
+Website sẽ thử phát nhạc ngay khi mở. Tuy nhiên trình duyệt (nhất là
+Safari/iPhone) thường chặn autoplay có âm thanh. Nút 'CHẠM ĐỂ MỞ THIỆP'
+phát nhạc trong thao tác chạm, ổn định hơn. Không có cách hợp lệ để đảm bảo
+âm thanh tự động phát trên tất cả điện thoại mà không cần tương tác.
 
-CÁC FILE TRONG THƯ MỤC assets
------------------------------
-hero.jpg              = ảnh mở đầu
-couple-portrait.jpg   = ảnh trong phần Lời ngỏ
-ao-ba-om.jpg          = ảnh Ao Bà Om
-bien-ba-dong.jpg      = ảnh Biển Ba Động
-wedding.mp3           = nhạc nền
-rsvp-qr.png           = mã QR dẫn đến Google Form
+LƯU Ý:
+Mốc 27–28/11 và hạn xác nhận 20/11 đang dựa trên nội dung bạn cung cấp.
+Lịch trình biển Ba Động cần được xác nhận giờ di chuyển thực tế.
+Ảnh Ao Bà Om/Biển Ba Động là ảnh được trích từ thiết kế bạn đã gửi;
+để nét hơn, bạn có thể thay bằng ảnh địa điểm gốc chất lượng cao.
+Sử dụng bản nhạc có quyền đăng tải/phát công khai để tránh vấn đề bản quyền.
