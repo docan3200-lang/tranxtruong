@@ -1,96 +1,116 @@
-'use strict';
-const opening = document.getElementById('opening');
-const openInvite = document.getElementById('openInvite');
-const bgMusic = document.getElementById('bgMusic');
-const musicToggle = document.getElementById('musicToggle');
-const musicText = document.getElementById('musicText');
-const musicHint = document.getElementById('musicHint');
-const petalLayer = document.getElementById('petalLayer');
-const scrollProgress = document.getElementById('scrollProgress');
-let pausedByUser = false;
-let hintTimer;
-let introOpened = false;
-bgMusic.volume = 0.42;
+(() => {
+  'use strict';
+  const audio = document.getElementById('bgMusic');
+  const toggle = document.getElementById('musicToggle');
+  const musicText = document.getElementById('musicText');
+  const open = document.getElementById('openInvite');
+  const note = document.getElementById('openingNote');
+  const status = document.getElementById('audioStatus');
+  const introMusic = document.getElementById('introMusicToggle');
+  let optedOut = false;
+  let started = false;
+  let statusTimer;
+  audio.volume = .55;
 
-function updateMusicButton() {
-  const playing = !bgMusic.paused;
-  musicText.textContent = playing ? 'Tắt nhạc' : 'Bật nhạc';
-  musicToggle.classList.toggle('is-playing', playing);
-  musicToggle.setAttribute('aria-label', playing ? 'Tắt nhạc nền' : 'Bật nhạc nền');
-}
-function hint(message) {
-  musicHint.textContent = message;
-  musicHint.hidden = false;
-  clearTimeout(hintTimer);
-  hintTimer = setTimeout(() => { musicHint.hidden = true; }, 3500);
-}
-function startMusic(showTip = false) {
-  // Called synchronously in click handler: best possible chance on iOS / Android.
-  const attempt = bgMusic.play();
-  if (attempt && typeof attempt.catch === 'function') {
-    attempt.catch(() => { if (showTip) hint('Chạm nút ♫ để bật nhạc nhé!'); updateMusicButton(); });
+  function syncMusic() {
+    const playing = !audio.paused && !audio.ended;
+    toggle.classList.toggle('is-playing', playing);
+    toggle.setAttribute('aria-pressed', String(playing));
+    toggle.setAttribute('aria-label', playing ? 'Tắt nhạc nền' : 'Bật nhạc nền');
+    musicText.textContent = playing ? 'Tắt nhạc' : 'Bật nhạc';
+    if (introMusic) {
+      introMusic.classList.toggle('is-playing', playing);
+      introMusic.setAttribute('aria-pressed', String(playing));
+      introMusic.setAttribute('aria-label', playing ? 'Tắt nhạc nền' : 'Bật nhạc nền');
+      introMusic.querySelector('.intro-music-text').textContent = playing ? 'Tắt nhạc' : 'Bật nhạc';
+    }
+    if (playing) {
+      started = true;
+      note.textContent = 'Giai điệu yêu thương đang phát ♡';
+      open.querySelector('.open-label').textContent = 'KHÁM PHÁ THIỆP';
+      status.hidden = true;
+    } else if (started) {
+      note.textContent = 'Bạn có thể bật lại giai điệu ở nút nhạc phía dưới';
+    }
   }
-  return attempt;
-}
-// Attempt sound on load. Some browsers block audible autoplay.
-window.addEventListener('load', () => { if (!pausedByUser) startMusic(false); });
-openInvite.addEventListener('click', () => {
-  if (introOpened) return;
-  introOpened = true;
-  openInvite.disabled = true;
-  pausedByUser = false;
-  startMusic(true);
-  opening.classList.add('opening-animation');
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  window.setTimeout(() => opening.classList.add('opening-out'), reduce ? 180 : 2450);
-  window.setTimeout(() => {
-    document.body.classList.remove('intro-locked');
-    opening.remove();
-  }, reduce ? 400 : 3340);
-});
-musicToggle.addEventListener('click', () => {
-  if (bgMusic.paused) { pausedByUser = false; startMusic(true); }
-  else { pausedByUser = true; bgMusic.pause(); }
-});
-bgMusic.addEventListener('play', () => { musicHint.hidden = true; updateMusicButton(); });
-bgMusic.addEventListener('pause', updateMusicButton);
-bgMusic.addEventListener('error', () => hint('Không tải được nhạc. Kiểm tra assets/wedding.mp3'));
-updateMusicButton();
-// Reveal sections. If unsupported, leave everything visible.
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-    });
-  }, { rootMargin: '0px 0px 40px 0px', threshold: 0.07 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-} else document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-// CSS petals: never opens a separate video on mobile.
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const mobile = window.matchMedia('(max-width:720px)').matches;
-const maxPetals = mobile ? 13 : 23;
-function addPetal() {
-  if (document.hidden || reduceMotion.matches || petalLayer.childElementCount >= maxPetals) return;
-  const el = document.createElement('span');
-  el.className = Math.random() > .68 ? 'petal soft' : 'petal';
-  el.style.left = Math.random() * 99 + 'vw';
-  el.style.width = 8 + Math.random() * 8 + 'px';
-  el.style.height = 10 + Math.random() * 12 + 'px';
-  el.style.setProperty('--drift', Math.round(Math.random() * 170 - 85) + 'px');
-  el.style.setProperty('--speed', (8 + Math.random() * 6).toFixed(1) + 's');
-  petalLayer.appendChild(el);
-  el.addEventListener('animationend', () => el.remove(), { once: true });
-}
-if (!reduceMotion.matches) {
-  for (let i = 0; i < 7; i++) setTimeout(addPetal, i * 210);
-  setInterval(addPetal, mobile ? 870 : 630);
-}
-let ticking = false;
-window.addEventListener('scroll', () => {
-  if (ticking) return; ticking = true;
-  requestAnimationFrame(() => {
-    const limit = document.documentElement.scrollHeight - window.innerHeight;
-    scrollProgress.style.width = (limit > 0 ? (window.scrollY / limit * 100) : 0) + '%';
-    ticking = false;
+  function message(text) {
+    clearTimeout(statusTimer);
+    status.textContent = text;
+    status.hidden = false;
+    statusTimer = setTimeout(() => { status.hidden = true; }, 6000);
+  }
+  function playMusic(fromGesture = false) {
+    // Call play synchronously inside a gesture; waiting first breaks iOS unlock.
+    const attempt = audio.play();
+    if (attempt && typeof attempt.catch === 'function') {
+      attempt.catch((error) => {
+        syncMusic();
+        if (error.name === 'NotAllowedError') {
+          note.textContent = 'Chạm “Mở thiệp” để nghe nhạc cùng chúng mình';
+          if (fromGesture) message('Chạm “Bật nhạc” để bắt đầu giai điệu nhé!');
+        } else if (fromGesture) {
+          message('Nhạc chưa tải xong. Bạn chạm “Bật nhạc” để thử lại nhé!');
+        }
+      });
+    }
+  }
+  audio.addEventListener('play', syncMusic);
+  audio.addEventListener('pause', syncMusic);
+  audio.addEventListener('error', () => message('Chưa tải được nhạc. Bạn kiểm tra kết nối và thử lại nhé!'));
+  function toggleMusic() {
+    if (audio.paused) { optedOut = false; playMusic(true); }
+    else { optedOut = true; audio.pause(); }
+  }
+  toggle.addEventListener('click', toggleMusic);
+  if (introMusic) introMusic.addEventListener('click', toggleMusic);
+  document.addEventListener('invitation:open', () => {
+    if (!optedOut && audio.paused) playMusic(true);
   });
-}, { passive:true });
+  open.addEventListener('click', () => {
+    if (audio.paused) { optedOut = false; playMusic(true); }
+    document.getElementById('loi-ngo').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  });
+  // A first tap anywhere on the invitation can unlock autoplay. Respect manual pause.
+  document.addEventListener('click', (event) => {
+    if (!started && !optedOut && !event.target.closest('#musicToggle, #openInvite, #invitationIntro')) playMusic();
+  });
+  document.addEventListener('keydown', (event) => {
+    if ((event.key === 'Enter' || event.key === ' ') && !started && !optedOut && !event.target.closest('button')) playMusic();
+  });
+  playMusic();
+  syncMusic();
+
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const petalLayer = document.getElementById('petals');
+  function makePetals() {
+    petalLayer.replaceChildren();
+    if (reduced.matches) return;
+    const count = innerWidth < 700 ? 22 : 34;
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < count; i++) {
+      const petal = document.createElement('span');
+      petal.className = 'petal';
+      const size = 7 + Math.random() * 9;
+      const duration = 12 + Math.random() * 13;
+      const variables = {x: `${Math.random()*100}%`, size: `${size}px`, duration: `${duration}s`, delay: `${-Math.random()*duration}s`, drift: `${Math.random()*170-85}px`, spin: `${Math.random()*540-270}deg`, sway: `${3+Math.random()*4}s`, rotate: `${Math.random()*180}deg`, opacity: `${.25+Math.random()*.4}`};
+      Object.entries(variables).forEach(([key,value]) => petal.style.setProperty(`--${key}`, value));
+      petal.appendChild(document.createElement('i'));
+      fragment.appendChild(petal);
+    }
+    petalLayer.appendChild(fragment);
+  }
+  makePetals();
+  if (reduced.addEventListener) reduced.addEventListener('change', makePetals);
+  document.addEventListener('visibilitychange', () => {
+    petalLayer.querySelectorAll('.petal').forEach(petal => {petal.style.animationPlayState = document.hidden ? 'paused' : 'running';});
+  });
+  if ('IntersectionObserver' in window && !reduced.matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, {threshold:.07});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.documentElement.classList.add('js-motion');
+  }
+})();

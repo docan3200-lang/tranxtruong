@@ -1,32 +1,81 @@
-THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN — BẢN THEO MOCKUP ĐÃ CHỐT
-=============================================================
+THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN
+28.11.2026 · TRÀ VINH
 
-PHẦN ĐÃ HOÀN THÀNH
-- Phong bì giấy màu ivory, dấu sáp T&T, nút CHẠM ĐỂ MỞ THIỆP
-- Tấm thiệp trượt lên sau khi nhấp, hiển thị THE WEDDING OF / Minh Trường & Quế Trân / 28.11.2026
-- Mobile dùng ảnh dọc gốc hero-mobile.jpg, KHÔNG dùng object-fit: cover nên không cắt dâu rể
-- Desktop dùng ảnh ngang gốc hero-desktop.jpg
-- Lời ngỏ, lịch trình Trà Vinh 27-28/11, ảnh Ao Bà Om và Biển Ba Động
-- Link Google Form RSVP + mã QR chính xác
-- Nhạc bài Lễ Đường, nút bật/tắt, hoa rơi nhẹ
-- Footer: Copyright by DO CHI CAN
+ĐƯA WEBSITE LÊN GITHUB PAGES
 
-CẬP NHẬT GITHUB PAGES
-1. Giải nén file ZIP (KHÔNG upload nguyên file ZIP).
-2. Mở https://github.com/docan3200-lang/tranxtruong
-3. Vào Code, cập nhật 3 file index.html, style.css, script.js và toàn bộ assets/.
-   Lưu ý: File mới phải nằm ở thư mục gốc repository, KHÔNG thêm một cấp thư mục con.
-4. Commit changes.
-5. Nếu Pages đang bật nhánh main /(root), KHÔNG cần bật lại.
-6. Mở https://docan3200-lang.github.io/tranxtruong/ và Ctrl+Shift+R (máy tính) / mở tab riêng trên iPhone để tránh cache.
+1. Giải nén file ZIP trên máy tính.
+2. Mở repository GitHub dùng cho thiệp cưới.
+3. Chọn Add file > Upload files.
+4. Kéo toàn bộ NỘI DUNG đã giải nén vào repository:
+   index.html, style.css, script.js, intro.css, intro.js, thư mục assets và .nojekyll.
+   index.html phải nằm ngay ngoài cùng repository, không nằm trong thư mục con.
+   Không tải nguyên file ZIP lên repository.
+5. Chọn Commit changes.
+6. Mở Settings > Pages.
+   Source: Deploy from a branch.
+   Branch: main (hoặc nhánh bạn vừa tải file lên).
+   Folder: / (root).
+   Chọn Save.
+7. Chờ GitHub triển khai xong rồi mở địa chỉ website trong phần Pages.
+   Nếu thay bản cũ mà chưa thấy giao diện mới, tải lại trang và xóa bộ nhớ đệm.
 
-LƯU Ý
-- Trình duyệt iPhone thường CHẶN nhạc tự phát có tiếng. Khách chạm "CHẠM ĐỂ MỞ THIỆP" sẽ kích hoạt nhạc.
-- Quyền phát công khai bản ghi âm phụ thuộc chủ sở hữu bản quyền; cần đảm bảo đã có quyền sử dụng nhạc.
-- Lịch trình tham quan Biển Ba Động sáng 28/11 có thể không đủ thời gian trước tiệc 11:00 tùy nơi lưu trú. Cần rà soát lịch trình trước khi gửi khách.
-- Ảnh Ao Bà Om/Biển Ba Động lấy từ tư liệu lịch trình đã cung cấp, có độ phân giải thấp. Nên thay ảnh gốc lớn nếu có.
+NẾU ĐÃ CÓ WEBSITE GITHUB PAGES
 
-TÙY CHỈNH
-- Trong index.html: chỉnh nội dung văn bản, giờ, ngày, link RSVP.
-- Trong style.css: sửa màu tại :root.
-- Thay ảnh trong assets/ theo đúng tên file.
+Tải đè index.html, style.css, script.js và các file assets trùng tên.
+Tải thêm intro.css, intro.js cùng assets/blush-bouquet.svg để mở phong bì hoạt động.
+Giữ nguyên thiết lập Pages hiện có nếu đang dùng main / root.
+Không xóa các file khác ngoài phạm vi thiệp nếu repository còn mục đích khác.
+
+MỞ PHONG BÌ & CHUYỂN VÀO WEBSITE
+
+- Khi truy cập, khách sẽ thấy phong bì kem hồng, dấu sáp T&T và hoa trang trí.
+- Chạm trực tiếp vào phong bì hoặc nút Chạm để mở thiệp.
+- Nắp phong bì mở, tấm thiệp trượt lên hiện tên Minh Trường & Quế Trân.
+- Tấm thiệp hiện trọn vẹn trong 5 giây rồi chuyển nhẹ vào website.
+- Nhạc phát từ lúc chạm và tiếp tục liền mạch khi chuyển trang.
+- Có nút Vào website để bỏ qua phần chờ khi cần.
+- Cuối trang có Xem lại thiệp mời và Copyright by DO CHI CAN.
+- Phần mở phong bì nằm trong intro.css và intro.js.
+- Thời gian giữ thiệp: HOLD_MS = 5000 trong intro.js.
+
+NHẠC & HIỆU ỨNG
+
+- Nhạc nền đã được đính kèm trong assets/wedding.mp3, phát lặp.
+- Website thử phát nhạc ngay khi mở trang.
+- Trình duyệt có thể chặn âm thanh trước lần chạm đầu tiên, đặc biệt trên điện thoại.
+  Đây là quy định của trình duyệt, không thể bảo đảm tự phát trên mọi thiết bị.
+- Nút “Chạm mở thiệp” hoặc “Bật nhạc” sẽ bật nhạc khi người xem tương tác.
+- Nút nhạc cố định ở góc dưới để bật/tắt bất cứ lúc nào.
+- Hoa rơi liên tục trên toàn trang; giảm số lượng trên điện thoại.
+- Khi thiết bị bật chế độ giảm chuyển động, hiệu ứng hoa sẽ dừng để dễ đọc.
+
+XÁC NHẬN THAM DỰ
+
+Nút xác nhận và mã QR cùng dẫn tới đúng Google Form đã cung cấp:
+https://docs.google.com/forms/d/e/1FAIpQLSdxaEkX8_KLoxcEeJ3CDu9AVxn4IBzPbX6ADZVHQI3McKheqQ/viewform
+
+Người tham dự điền và gửi thông tin trên Google Form.
+Thiệp không tự gửi dữ liệu và không lưu phản hồi riêng.
+Hạn xác nhận đang để 20/11 theo ảnh mẫu.
+
+NỘI DUNG & CHỈNH SỬA
+
+- Nội dung, ngày giờ, tên: sửa trong index.html.
+- Màu sắc và bố cục: sửa trong style.css.
+- Hiệu ứng và nhạc: script.js.
+- Ảnh: thay file tương ứng trong assets và giữ nguyên tên.
+- Nhạc: thay assets/wedding.mp3 bằng bản nhạc MP3 khác và giữ nguyên tên.
+- Mã QR đã được tạo và kiểm tra giải mã đúng đường dẫn form.
+- Ảnh và font chữ đã được lưu kèm, không cần tải font từ bên ngoài.
+- Giấy phép font nằm trong assets/fonts/LICENSE-*.txt.
+
+Lưu ý: ảnh mẫu không có địa chỉ tiệc cưới hoặc tên khách sạn cụ thể.
+Thiệp giữ thông tin Trà Vinh và lịch trình đã gửi, không thêm địa chỉ chưa xác nhận.
+Nếu cần, bổ sung địa chỉ tiệc cưới vào index.html trước khi chia sẻ cho khách.
+
+MỞ THỬ TRÊN MÁY
+
+Nhấp đúp index.html sau khi giải nén để xem.
+Để khách truy cập bằng điện thoại, hãy dùng đường dẫn GitHub Pages sau khi triển khai.
+
+Gói website tĩnh; không cần npm, cài đặt ứng dụng hay dịch vụ trả phí.
