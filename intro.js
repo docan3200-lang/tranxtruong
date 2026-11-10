@@ -9,7 +9,8 @@
   const replay = document.getElementById('replayInvite');
   const message = document.getElementById('introMessage');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const HOLD_MS = 5000;
+  const HOLD_MS = 3000;
+  intro.style.setProperty('--invitation-hold', `${HOLD_MS}ms`);
   let timers = [];
   let state = 'sealed';
   let returnFocus;
@@ -48,7 +49,7 @@
     intro.classList.add('is-holding');
     intro.dataset.holdStartedAt = String(performance.now());
     message.textContent = 'Hạnh phúc khi có bạn chung vui.';
-    // Count the full five seconds only after the card is lifted and the envelope fades.
+    // Count the full three seconds only after the card is lifted and the envelope fades.
     schedule(enterWebsite, HOLD_MS);
   }
   function openInvitation() {
@@ -86,7 +87,8 @@
     openButton.removeAttribute('aria-disabled');
     skipButton.hidden = true;
     message.textContent = 'Hạnh phúc khi có bạn chung vui.';
-    openButton.focus({preventScroll:true});
+    intro.setAttribute('tabindex', '-1');
+    intro.focus({preventScroll:true});
   }
   envelope.addEventListener('click', openInvitation);
   openButton.addEventListener('click', openInvitation);

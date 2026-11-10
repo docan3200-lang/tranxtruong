@@ -22,21 +22,21 @@ THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN
 NẾU ĐÃ CÓ WEBSITE GITHUB PAGES
 
 Tải đè index.html, style.css, script.js và các file assets trùng tên.
-Tải thêm intro.css, intro.js cùng assets/blush-bouquet.svg để mở phong bì hoạt động.
+Tải thêm intro.css, intro.js và toàn bộ thư mục assets trong ZIP để mở phong bì hoạt động.
 Giữ nguyên thiết lập Pages hiện có nếu đang dùng main / root.
 Không xóa các file khác ngoài phạm vi thiệp nếu repository còn mục đích khác.
 
 MỞ PHONG BÌ & CHUYỂN VÀO WEBSITE
 
-- Khi truy cập, khách sẽ thấy phong bì kem hồng, dấu sáp T&T và hoa trang trí.
+- Khi truy cập, khách sẽ thấy phong bì kem hồng, monogram T&T, dấu sáp và viền champagne gold.
 - Chạm trực tiếp vào phong bì hoặc nút Chạm để mở thiệp.
 - Nắp phong bì mở, tấm thiệp trượt lên hiện tên Minh Trường & Quế Trân.
-- Tấm thiệp hiện trọn vẹn trong 5 giây rồi chuyển nhẹ vào website.
+- Tấm thiệp hiện trọn vẹn trong 3 giây rồi chuyển nhẹ vào website.
 - Nhạc phát từ lúc chạm và tiếp tục liền mạch khi chuyển trang.
 - Có nút Vào website để bỏ qua phần chờ khi cần.
 - Cuối trang có Xem lại thiệp mời và Copyright by DO CHI CAN.
 - Phần mở phong bì nằm trong intro.css và intro.js.
-- Thời gian giữ thiệp: HOLD_MS = 5000 trong intro.js.
+- Thời gian giữ thiệp: HOLD_MS = 3000 trong intro.js.
 
 NHẠC & HIỆU ỨNG
 
@@ -79,3 +79,16 @@ Nhấp đúp index.html sau khi giải nén để xem.
 Để khách truy cập bằng điện thoại, hãy dùng đường dẫn GitHub Pages sau khi triển khai.
 
 Gói website tĩnh; không cần npm, cài đặt ứng dụng hay dịch vụ trả phí.
+
+BẢN CẬP NHẬT THEO MẪU PREMIUM HỒNG KEM
+
+- Giữ màu sắc và bố cục của bản Premium trong ảnh tham chiếu.
+- Màn mở thiệp bỏ cụm hoa; dùng monogram T&T, dấu sáp và khung champagne gold.
+- Giữ thiệp 3 giây rồi chuyển vào website.
+- Không sử dụng ảnh vest đen.
+- Ảnh bìa: hero-cover trên máy tính, hero-mobile trên điện thoại.
+- Lời ngỏ: letter-architecture, ảnh bên kiến trúc cổ.
+- Khoảnh khắc: couple-moment, ảnh trao nhau nụ cười bên cột đá.
+- Không lặp ảnh giữa các phần trên cùng màn hình.
+- Ảnh WebP có nhiều kích thước để tải phù hợp với từng thiết bị.
+- Copyright by DO CHI CAN ở cuối trang.
