@@ -1,0 +1,37 @@
+THIỆP CƯỚI MINH TRƯỜNG & QUẾ TRÂN — HƯỚNG DẪN KHÔNG CẦN BIẾT CODE
+
+1. THÊM ẢNH VÀ NHẠC
+Mở thư mục assets và đặt đúng tên các file sau:
+- hero.jpg : ảnh cưới ngang làm nền đầu website
+- couple-portrait.jpg : ảnh cưới chân dung ở phần lời ngỏ
+- ao-ba-om.jpg : ảnh Ao Bà Om
+- bien-ba-dong.jpg : ảnh Biển Ba Động
+- romantic-piano.mp3 : bản nhạc piano mà bạn có quyền sử dụng
+
+2. ĐIỀN LINK VÀ ĐỊA CHỈ
+Mở script.js bằng Notepad hoặc trình sửa văn bản.
+Trong khối CONFIG đầu file, điền rsvpUrl, intimateAddress, intimateMapUrl, weddingAddress, weddingMapUrl.
+Giữ dấu nháy đơn quanh các giá trị. Ví dụ:
+rsvpUrl: 'https://docs.google.com/forms/d/e/ABC/viewform',
+
+3. ĐỔI NGÀY / GIỜ / NỘI DUNG
+Mở index.html bằng trình sửa văn bản, tìm các cụm chữ cần thay và lưu lại.
+Lưu ý lịch trình biển Ba Động 08:30 và chuẩn bị tiệc 10:00 có thể quá gấp; cần xác minh trước khi gửi khách.
+
+4. ĐĂNG WEBSITE MIỄN PHÍ BẰNG GITHUB PAGES
+- Tạo tài khoản tại https://github.com
+- Chọn New repository; đặt tên wedding-truong-tran; chọn Public; Create repository.
+- Chọn Add file > Upload files, tải lên index.html, style.css, script.js và toàn bộ thư mục assets (giữ cấu trúc thư mục).
+- Nhấn Commit changes.
+- Vào Settings > Pages > Build and deployment > Source: Deploy from a branch.
+- Branch: main, folder: /(root) > Save.
+- Chờ GitHub triển khai; đường dẫn thường có dạng https://TEN-TAI-KHOAN.github.io/wedding-truong-tran/
+- Mở trên điện thoại, kiểm tra nút MỞ THIỆP, âm nhạc, Google Maps và RSVP.
+
+5. LƯU Ý
+- Nhạc chỉ bắt đầu sau khi khách bấm MỞ THIỆP. Trình duyệt có thể chặn phát tự động khi chưa có tương tác.
+- Nếu chưa có file romantic-piano.mp3, website vẫn mở nhưng không có nhạc.
+- Các nút địa điểm chỉ hoạt động khi bạn điền link Google Maps.
+- Không sử dụng nhạc thương mại nếu chưa có quyền sử dụng.
+- GitHub Pages miễn phí với kho công khai, nên KHÔNG tải thông tin riêng tư hoặc dữ liệu khách mời lên kho.
+- Form RSVP cần được tạo riêng bằng Google Forms, liên kết trong script.js.
