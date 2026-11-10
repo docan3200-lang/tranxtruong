@@ -32,3 +32,41 @@
 }
 @media(max-width:380px){.hero-names{font-size:17px}.hero-amp{font-size:19px}.hero-script{font-size:51px}.journey-card{padding-left:15px;padding-right:15px}.opening-content{padding-top:0;padding-bottom:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.petal{display:none}.reveal{opacity:1;transform:none;transition:none}.opening .envelope-flap,.opening .invitation-insert,.opening .envelope-seal{transition:none}}
+
+/* FIX V5: Keep the invitation CTA visible and tappable on any viewport. */
+.opening .open-invite {
+  position: fixed;
+  left: 50%;
+  bottom: max(28px, env(safe-area-inset-bottom, 0px) + 20px);
+  transform: translateX(-50%);
+  z-index: 130;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: calc(100vw - 36px);
+  min-height: 52px;
+  padding: 14px 28px;
+  background: #915465;
+  color: #fffaf7;
+  border: 1px solid #915465;
+  border-radius: 999px;
+  box-shadow: 0 12px 28px rgba(100, 53, 68, .27);
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+.opening .open-invite:hover { background: #7f4556; }
+.opening .open-invite:focus-visible { outline: 3px solid #bf8191; outline-offset: 4px; }
+.opening .opening-help { position: fixed; left: 0; right: 0; bottom: max(93px, env(safe-area-inset-bottom, 0px) + 84px); margin: 0; z-index: 130; pointer-events: none; }
+.opening.opening-animation .open-invite { opacity: 0; pointer-events: none; transition: opacity .25s; }
+.opening.opening-animation .opening-help { opacity: 0; }
+@media (max-height: 700px) {
+  .opening .opening-content { transform: translateY(-48px) scale(.82); transform-origin: center center; }
+}
+@media (max-width: 720px) {
+  .opening .open-invite { font-size: 12px; min-height: 52px; padding: 13px 27px; }
+  .opening .opening-content { transform: translateY(-34px); }
+  .opening .opening-help { font-size: 12px; }
+}
